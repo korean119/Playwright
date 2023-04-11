@@ -6,6 +6,11 @@ test.afterAll( async ({ page }) => {
   await page.close();
   await page.close();
   await page.close();
+  await page.close();
+  await page.close();
+  await page.close();
+  
+  await page.close();
 })
 
 test('assertion', async ({ page }) => {
@@ -87,7 +92,6 @@ test('assertion', async ({ page }) => {
 
   await page.getByRole('button', { name: '서명 요청하기' })
 
-  await page.get
 
 
 })
