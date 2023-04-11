@@ -1,9 +1,10 @@
-import { test, expect, chromium } from '@playwright/test';
-
+import { chromium, expect, test } from '@playwright/test';
 
 
 test.afterAll( async ({ page }) => {
  
+  await page.close();
+  await page.close();
   await page.close();
 })
 
@@ -84,8 +85,9 @@ test('assertion', async ({ page }) => {
   await page.locator('label').filter({ hasText: '서명 요청 시 이용 중인 요금제에 포함된 제공 횟수가 차감됩니다.' }).click();
 
 
-  await page.getByRole('button', { name: '서명 요청하기' }).click();
+  await page.getByRole('button', { name: '서명 요청하기' })
 
+  await page.get
 
 
 })
